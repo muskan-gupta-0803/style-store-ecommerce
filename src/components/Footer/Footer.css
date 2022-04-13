@@ -1,0 +1,15 @@
+/* footer styles */
+.footer{
+    position: relative;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+}
+
+.footer-text{
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--logo-color);
+    width: 100%;
+    padding: 2px 0;
+}
