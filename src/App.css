@@ -1,4 +1,5 @@
 @import url("https://lilac-ui.netlify.app/css/components.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
 
 :root{
   --primary-color:black;
