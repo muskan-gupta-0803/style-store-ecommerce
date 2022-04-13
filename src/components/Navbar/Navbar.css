@@ -1,0 +1,51 @@
+.lilac-navbar{
+    position: fixed;
+}
+
+.nav-logo{
+    color: var(--logo-color);
+}
+
+.nav-search{
+    width: 26rem;
+    padding: 0.4em;
+    outline: none;
+}
+
+.lilac-nav-links{
+    width:30%;
+}
+
+.fa-search{
+    color: var(--logo-color);
+}
+
+.search-icon{
+    background: none;
+    border: none;
+    margin-left: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.4rem 0;
+}
+
+.login-button{
+    color: var(--primary-color);
+    background-color: var(--white-color);
+    font-size: 1rem;
+    padding-top: 3px;
+    padding-bottom: 4px;
+}
+
+.login-button:hover{
+    background-color: var(--logo-color);
+}
+
+.lilac-navbar{
+    height: 7vh;
+}
+
+.num-badge{
+    background-color: var(--icon-badge);
+    border:1px solid var(--icon-badge);
+}
