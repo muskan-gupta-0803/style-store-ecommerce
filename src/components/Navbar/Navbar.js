@@ -1,15 +1,16 @@
 import "../Navbar/Navbar.css";
+import {Link} from "react-router-dom";
 
 export default function Navbar(){
     return(
         <header className="header">
         <div className="lilac-navbar">
             {/* logo */}
-            <a className="logo" href="/index.html">
+            <Link to="/">
                 <div className="lilac-nav-logo nav-logo">
                     Style Store
                 </div>
-            </a>    
+            </Link>    
 
             {/*  nav search bar  */}
             <form className="form">
@@ -21,20 +22,22 @@ export default function Navbar(){
         
             {/*  nav links  */}
             <div className="lilac-nav-links">
-                <a href="./pages/login.html" className="lilac-nav-items"><span className="btn btn-link login-button">Login</span></a>
-                <a href="./pages/wishlist.html" className="lilac-nav-items">
+                <Link to="/" className="lilac-nav-items">
+                    <span className="btn btn-link login-button">Login</span>
+                </Link>
+                <Link to="/wishlist" className="lilac-nav-items">
                     <span className="icon-span">
                         <div className="num-badge">8</div>
                         <i className="far fa-heart"></i>  
                     </span>
                 
-                </a>
-                <a href="/pages/cart.html" className="lilac-nav-items">
+                </Link>
+                <Link to="/cart" className="lilac-nav-items">
                     <span className="icon-span">
                         <div className="num-badge">10</div>
                         <i className="fas fa-shopping-cart"></i>        
                     </span>
-                </a>
+                </Link>
                 <a href="#" className="lilac-nav-items">
                     <span><i className="fas fa-bars"></i></span>
                 </a>
