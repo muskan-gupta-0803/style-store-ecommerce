@@ -1,11 +1,12 @@
 import "../Homepage/Homepage.css";
+import { Link } from "react-router-dom";
 import TShirts from "../../assets/category-img/shirts.jpg";
 import FormalShirts from "../../assets/category-img/formal-shirts.jpg";
 import CasualShirts from "../../assets/category-img/casual-shirts.jpg";
 import Jeans from "../../assets/category-img/jeans.jpg";
 import Trousers from "../../assets/category-img/trousers.jpg";
 
-export default function Homepage(){
+export function Homepage(){
     return(
 
         <main className="main-container">
@@ -47,9 +48,9 @@ export default function Homepage(){
               <div className="text-data">
                   <small>THE STYLE STORE</small>
                   <h1>New Styles For the style changers</h1>
-                  <a href="#">
+                  <Link to="/products">
                       <button className="btn btn-primary">View all Products</button>
-                  </a>
+                  </Link>
               </div>
           </div>
 

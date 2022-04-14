@@ -1,0 +1,88 @@
+.main-container-prod{
+    margin: 8vh 1rem 0 1rem;
+    background-color: var(--grey-color);
+    position: relative;
+    display:flex;
+    height: 100%;
+    gap: 20px;    
+}
+
+/* SIDENAV STYLES */
+
+.filter-sidenav{
+    display: flex;
+    flex-direction: column;
+    width:20vw;
+    flex: 1 0 20%;
+    min-width: 200px;
+    min-height: 100vh;
+    padding: 1rem;
+    position:fixed;
+    top: 8vh;
+}
+
+.filter-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.f-title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.clr-filter{
+    color: var(--icon-badge);
+    cursor: pointer;
+}
+
+.filter-form label{
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+}
+
+.filter-form input{
+    margin-right: 0.5rem;
+}
+
+/* PRODUCTS STYLES */
+
+.prod-section{
+    display: flex;
+    flex-basis: 80%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left:20vw ;
+    padding-top: 8px;
+}
+
+.card{
+    height:fit-content;
+    max-width: 50%;
+    padding: 0.8rem 0.8rem 0 0.8rem;
+}
+
+.card a{
+    text-decoration: none;
+}
+
+.add-cart{
+    display: block;
+    color:var(--logo-color);
+    width:100%;
+    margin:0.5rem 0;
+    cursor: pointer;
+}
+
+.add-cart:hover{
+    opacity: 0.9;
+}
+
+.fa-heart{
+    color: var(--logo-color);
+}
+
+.fa-heart:hover, .fa-heart:focus{
+    color: var(--red-color);
+    cursor: pointer;
+}
