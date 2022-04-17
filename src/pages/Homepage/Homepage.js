@@ -1,49 +1,44 @@
 import "../Homepage/Homepage.css";
 import { Link } from "react-router-dom";
-import TShirts from "../../assets/category-img/shirts.jpg";
-import FormalShirts from "../../assets/category-img/formal-shirts.jpg";
-import CasualShirts from "../../assets/category-img/casual-shirts.jpg";
-import Jeans from "../../assets/category-img/jeans.jpg";
-import Trousers from "../../assets/category-img/trousers.jpg";
+import { tshirtImg,casualShirtsImg,formalShirtsImg,jeansImg,trousersImg } from "../../assets";
 
 export function Homepage(){
     return(
 
         <main className="main-container">
-          {/*  FIRST SECTION  */}
+         
           <div className="categories">
               <div className="card br-md">
-                  <img className="card-img br-md" src={TShirts} alt="T-shirts"/>
+                  <img className="card-img br-md" src={tshirtImg} alt="T-shirts"/>
                   <span className="overlay-text br-md">T-SHIRTS</span>  
               </div>
 
               <div className="card br-md">
-                  <img className="card-img br-md" src={FormalShirts} alt="Formal Shirts"/>
+                  <img className="card-img br-md" src={formalShirtsImg} alt="Formal Shirts"/>
                   <span className="overlay-text br-md">FORMAL SHIRTS</span>
                   
               </div>
 
               <div className="card br-md">
-                  <img className="card-img br-md" src={CasualShirts} alt="Casual Shirts"/>
+                  <img className="card-img br-md" src={casualShirtsImg} alt="Casual Shirts"/>
                   <span className="overlay-text br-md">CASUAL SHIRTS</span>
                   
               </div>
 
               <div className="card br-md">
-                  <img className="card-img br-md" src={Jeans} alt="Jeans"/>
+                  <img className="card-img br-md" src={jeansImg} alt="Jeans"/>
                   <span className="overlay-text br-md">JEANS</span>
                   
               </div>
 
               <div className="card br-md">
-                  <img className="card-img br-md" src={Trousers} alt="Trousers"/>
+                  <img className="card-img br-md" src={trousersImg} alt="Trousers"/>
                   <span className="overlay-text br-md">TROUSERS</span>
                   
               </div>
 
           </div>
 
-          {/*  SECOND SECTION  */}
           <div className="mid-container">
               <div className="text-data">
                   <small>THE STYLE STORE</small>
@@ -57,7 +52,7 @@ export function Homepage(){
           <div className="last-container">
 
               <div className="card-horizontal br-sm card-shadow">
-                  <img className="card-img br-sm cd-img img-responsive" src={TShirts} alt="Tshirts"/>
+                  <img className="card-img br-sm cd-img img-responsive" src={tshirtImg} alt="Tshirts"/>
                   <div className="card-body">
                       <small className="card-subtitle">NEW ARRIVALS</small>
                       <h3 className="card-title cd-title">Title</h3>
@@ -67,7 +62,7 @@ export function Homepage(){
               </div> 
 
               <div className="card-horizontal br-sm card-shadow">
-                  <img className="card-img br-sm cd-img img-responsive" src={TShirts} alt="Tshirts"/>
+                  <img className="card-img br-sm cd-img img-responsive" src={tshirtImg} alt="Tshirts"/>
                   <div className="card-body">
                       <small className="card-subtitle">NEW ARRIVALS</small>
                       <h3 className="card-title cd-title">Title</h3>
