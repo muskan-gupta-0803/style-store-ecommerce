@@ -9,17 +9,17 @@ import { tshirtImg, casualShirtsImg, formalShirtsImg, jeansImg, trousersImg } fr
 export const categories = [
   {
     _id: uuid(),
-    categoryName: "T-shirt",
+    categoryName: "TShirt",
     image: tshirtImg
   },
   {
     _id: uuid(),
-    categoryName: "Formal Shirt",
+    categoryName: "FormalShirt",
     image: formalShirtsImg
   },
   {
     _id: uuid(),
-    categoryName: "Casual Shirt",
+    categoryName: "CasualShirt",
     image: casualShirtsImg
   },
   {

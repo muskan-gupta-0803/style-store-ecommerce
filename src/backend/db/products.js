@@ -27,8 +27,8 @@ import {
 export const products = [
     {
         _id: uuid(),
-        title: "Plain White T-shirt",
-        categoryName: "T-shirt",
+        title: "Plain White Tshirt",
+        categoryName: "TShirt",
         prodImg: tshirt1,
         rating: 5,
         reviews: 488,
@@ -60,8 +60,8 @@ export const products = [
     },
     {
         _id: uuid(),
-        title: "Printed Art T-shirt",
-        categoryName: "T-shirt",
+        title: "Printed Art Tshirt",
+        categoryName: "TShirt",
         prodImg: tshirt2,
         rating: 3.8,
         reviews: 128,
@@ -71,8 +71,8 @@ export const products = [
     },
     {
         _id: uuid(),
-        title: "Tealer Maroon T-shirt",
-        categoryName: "T-shirt",
+        title: "Tealer Maroon Tshirt",
+        categoryName: "TShirt",
         prodImg: tshirt3,
         rating: 4.5,
         reviews: 200,
@@ -83,7 +83,7 @@ export const products = [
     {
         _id: uuid(),
         title: "Color-block Shirt",
-        categoryName: "Casual Shirt",
+        categoryName: "CasualShirt",
         prodImg: casualShirt1,
         rating: 3.5,
         reviews: 511,
@@ -93,8 +93,8 @@ export const products = [
     },
     {
         _id: uuid(),
-        title: "Striped T-shirt",
-        categoryName: "T-shirt",
+        title: "Striped Tshirt",
+        categoryName: "TShirt",
         prodImg: tshirt4,
         rating: 2.9,
         reviews: 88,
@@ -104,8 +104,8 @@ export const products = [
     },
     {
         _id: uuid(),
-        title: "Coloured T-shirts",
-        categoryName: "T-shirt",
+        title: "Coloured Tshirts",
+        categoryName: "TShirt",
         prodImg: tshirt5,
         rating: 1,
         reviews: 55,
@@ -116,7 +116,7 @@ export const products = [
     {
         _id: uuid(),
         title: "Highlander White Shirt",
-        categoryName: "Casual Shirt",
+        categoryName: "CasualShirt",
         prodImg: casualShirt2,
         rating: 4,
         reviews: 852,
@@ -138,7 +138,7 @@ export const products = [
     {
         _id: uuid(),
         title: "Highlander Printed Shirt",
-        categoryName: "Casual Shirt",
+        categoryName: "CasualShirt",
         prodImg: casualShirt3,
         rating: 5,
         reviews: 688,
@@ -150,7 +150,7 @@ export const products = [
     {
         _id: uuid(),
         title: "INVICTUS White Shirt",
-        categoryName: "Formal Shirt",
+        categoryName: "FormalShirt",
         prodImg: formalShirt1,
         rating: 3.8,
         reviews: 150,
@@ -172,7 +172,7 @@ export const products = [
     {
         _id: uuid(),
         title: "U.S. Polo Assn. Shirt",
-        categoryName: "Formal Shirt",
+        categoryName: "FormalShirt",
         prodImg: formalShirt2,
         rating: 4,
         reviews: 50,
@@ -183,7 +183,7 @@ export const products = [
     {
         _id: uuid(),
         title: "Plain White Shirt",
-        categoryName: "Formal Shirt",
+        categoryName: "FormalShirt",
         prodImg: formalShirt3,
         rating: 4.8,
         reviews: 250,
