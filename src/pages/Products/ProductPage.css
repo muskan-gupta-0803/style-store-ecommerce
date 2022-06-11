@@ -3,6 +3,7 @@
     background-color: var(--grey-color);
     position: relative;
     display:flex;
+    min-height: 90vh;
     height: 100%;
     gap: 20px;    
 }
