@@ -3,6 +3,7 @@
     background-color: var(--grey-color);
     position: relative;
     display:flex;
+    min-height: 90vh;
     height: 100%;
     gap: 20px;    
 }
@@ -56,6 +57,11 @@
     padding-top: 8px;
 }
 
+.product-text{
+    width:100%;
+    margin:0.5rem 1rem;
+}
+
 .card{
     height:fit-content;
     max-width: 50%;
@@ -70,7 +76,7 @@
     display: block;
     color:var(--logo-color);
     width:100%;
-    margin:0.5rem 0;
+    margin:0.8rem 0;
     cursor: pointer;
 }
 
@@ -85,4 +91,26 @@
 .fa-heart:hover, .fa-heart:focus{
     color: var(--red-color);
     cursor: pointer;
+}
+
+.card-rating,.card-price{
+    display: flex;
+    align-items: center;
+    gap:5px;
+    padding: 0.5rem 0 0;
+}
+
+.prod-img{
+    height: 250px;
+    width:250px;
+    background-color: pink;
+    object-fit: cover;
+}
+
+.card-title{
+    word-wrap: break-word;
+}
+
+.card-body{
+    padding-top: 0;
 }

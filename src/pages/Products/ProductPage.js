@@ -1,110 +1,85 @@
 import "../Products/ProductPage.css";
+import { Filter, ProductCard } from "../../components";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { useProduct } from "../../contexts";
+import { getfilteredCategoryProducts,getfilteredPriceProducts,getfilteredRatingProducts,getSortedProducts } from "../../utilities/filterFunctions";
+import { products } from "../../backend/db/products";
 
-export function ProductPage(){
-    return(
+export function ProductPage() {
+    const {state,dispatch} = useProduct();
+
+    const filteredPriceProducts=getfilteredPriceProducts(state.products,state.price);
+    console.log(state.products,"heloooo")
+    
+    const filteredCategoryProducts=getfilteredCategoryProducts(filteredPriceProducts,
+        state.categories.TShirt,
+        state.categories.CasualShirt,
+        state.categories.FormalShirt,
+        state.categories.Jeans,
+        state.categories.Trousers 
+    );
+    
+    const filteredRatingProducts = getfilteredRatingProducts(filteredCategoryProducts, state.rating);
+    
+    const finalSortedProducts = getSortedProducts(filteredRatingProducts, state.sortBy);
+    // console.log(state.sortBy,"sortby ")
+    // console.log(finalSortedProducts)
+    
+
+    // useEffect(() => {
+    //     (async () => {
+    //         try {
+    //            const {
+    //                data:{products},
+    //            }=await axios.get("/api/products");
+    //            dispatch({type:"INIT_PRODUCTS",payload:products});
+    //         }catch(error){
+    //             console.log(error)
+    //         }
+    //     })();
+    // },[]);
+
+    return (
         <main className="main-container-prod">
-            <aside className="filter-sidenav">
-                <div className="f-title"> 
-                    <span>Filters</span>
-                    <span className="clr-filter">Clear</span>
-                </div>
-
-                <form action="" className="filter-form">
-                    <label for="price" className="fs-md fw-semibold">
-                        Price 
-                    </label>
-                    <input type="range" name="price" id="" />
-
-                    <label for="category" className="fs-md fw-semibold">
-                        Category
-                    </label>
-                    <label for="rating"><input type="checkbox" name="rating" id="" />Shirts</label>
-                    <label for="rating"><input type="checkbox" name="rating" id="" />Shirts</label>
-                    <label for="rating"><input type="checkbox" name="rating" id="" />Shirts</label>
-
-                    <label for="rating" className="fs-md fw-semibold">
-                            Rating
-                    </label>
-
-                    <label for="rating"><input type="radio" name="rating" id="" />4 Stars & above</label>
-                    <label for="rating"><input type="radio" name="rating" id="" />4 Stars & above</label>
-                    <label for="rating"><input type="radio" name="rating" id="" />4 Stars & above</label>
-                    <label for="rating"><input type="radio" name="rating" id="" />4 Stars & above</label>
-
-                    <label for="sort" className="fs-md fw-semibold">
-                        Rating
-                    </label>
-
-                    <label for="sort"><input type="radio" name="rating" id="" />Price-low to high</label>
-                    <label for="sort"><input type="radio" name="rating" id="" />Price-high to low</label>
-
-                </form>
-
-            </aside>
+            <Filter />
 
             <section className="prod-section">
-                <div className="card br-sm">
-                    <img className="card-img br-sm img-responsive" src="https://picsum.photos/250/250" alt=""/>
-                    <span className="close-icon"><i className="fas fa-heart"></i></span>
-                    <div className="card-body">
-                    <h3 className="card-title">Summer T-shirt</h3>
-                    <small className="card-subtitle fw-semibold">&#8377; 800</small>
-                    <a href=""><button className="btn btn-primary add-cart">Add to Cart</button></a>
-                    </div>
+                <div className="product-text">
+                    <h1 className="">Products: {finalSortedProducts?.length}</h1>
                 </div>
-
-                <div className="card br-sm">
-                    <img className="card-img br-sm img-responsive" src="https://picsum.photos/250/250" alt=""/>
-                    <span className="close-icon"><i className="fas fa-heart"></i></span>
-                    <div className="card-body">
-                    <h3 className="card-title">Summer T-shirt</h3>
-                    <small className="card-subtitle fw-semibold">&#8377; 800</small>
-                    <a href=""><button className="btn btn-primary add-cart">Add to Cart</button></a>
-                    </div>
+                {/* {console.log(filteredRatingProducts)} */}
+                {finalSortedProducts?.length >0 ? (finalSortedProducts?.map(
+                    ({
+                        _id,
+                        title,
+                        categoryName,
+                        prodImg,
+                        rating,
+                        reviews,
+                        originalPrice,
+                        discountPrice,
+                        discountRate,
+                    }) => (
+                        <ProductCard
+                            key={_id}
+                            title={title}
+                            categoryName={categoryName}
+                            prodImg={prodImg}
+                            rating={rating}
+                            reviews={reviews}
+                            originalPrice={originalPrice}
+                            discountPrice={discountPrice}
+                            discountRate={discountRate}
+                        />
+                    )
+                )):
+                (
+                    <div className="product-text">
+                    <h1 className="">No products found :(</h1>
                 </div>
-
-                <div className="card br-sm">
-                    <img className="card-img br-sm img-responsive" src="https://picsum.photos/250/250" alt=""/>
-                    <span className="close-icon"><i className="fas fa-heart"></i></span>
-                    <div className="card-body">
-                    <h3 className="card-title">Summer T-shirt</h3>
-                    <small className="card-subtitle fw-semibold">&#8377; 800</small>
-                    <a href=""><button className="btn btn-primary add-cart">Add to Cart</button></a>
-                    </div>
-                </div>
-
-                <div className="card br-sm">
-                    <img className="card-img br-sm img-responsive" src="https://picsum.photos/250/250" alt=""/>
-                    <span className="close-icon"><i className="fas fa-heart"></i></span>
-                    <div className="card-body">
-                    <h3 className="card-title">Summer T-shirt</h3>
-                    <small className="card-subtitle fw-semibold">&#8377; 800</small>
-                    <a href=""><button className="btn btn-primary add-cart">Add to Cart</button></a>
-                    </div>
-                </div>
-
-                <div className="card br-sm">
-                    <img className="card-img br-sm img-responsive" src="https://picsum.photos/250/250" alt=""/>
-                    <span className="close-icon"><i className="fas fa-heart"></i></span>
-                    <div className="card-body">
-                    <h3 className="card-title">Summer T-shirt</h3>
-                    <small className="card-subtitle fw-semibold">&#8377; 800</small>
-                    <a href=""><button className="btn btn-primary add-cart">Add to Cart</button></a>
-                    </div>
-                </div>
-
-                <div className="card br-sm">
-                    <img className="card-img br-sm img-responsive" src="https://picsum.photos/250/250" alt=""/>
-                    <span className="close-icon"><i className="fas fa-heart"></i></span>
-                    <div className="card-body">
-                    <h3 className="card-title">Summer T-shirt</h3>
-                    <small className="card-subtitle fw-semibold">&#8377; 800</small>
-                    <a href=""><button className="btn btn-primary add-cart">Add to Cart</button></a>
-                    </div>
-                </div>
-
+                )}
             </section>
-
         </main>
-    )
+    );
 }

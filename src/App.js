@@ -1,6 +1,6 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-// import Homepage  from "./pages/Homepage/Homepage.js";
+
 import {Homepage, ProductPage, Wishlist, Cart} from "./pages";
 
 import Navbar from "./components/Navbar/Navbar.js";
